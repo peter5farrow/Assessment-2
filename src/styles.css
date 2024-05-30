@@ -1,0 +1,33 @@
+* {
+  background-color: black;
+}
+
+body {
+  color: white;
+  font-family: sans-serif;
+}
+
+input {
+  background-color: white;
+  margin: 10px;
+}
+
+#lightsaber-color {
+  background-color: white;
+  margin: 10px;
+}
+
+td {
+  border: 1px solid white;
+  padding: 5px;
+}
+
+th {
+  border: 1px solid white;
+  padding: 5px;
+}
+
+table {
+  border: 1px solid white;
+  margin-top: 50px;
+}

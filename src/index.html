@@ -7,5 +7,65 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <body></body>
+  <body>
+    <form>
+      <div class="form-group">
+        <label for="character">Character Name:</label>
+        <input type="text" name="character-name" id="character" />
+      </div>
+
+      <div class="form-group">
+        <input type="radio" name="good-or-evil" id="jedi" value="jedi" />
+        <label for="jedi">Jedi</label>
+        <input type="radio" name="good-or-evil" id="sith" value="sith" />
+        <label for="jedi">Sith</label>
+      </div>
+
+      <div class="form-group">
+        <label>Lightsaber color:</label>
+        <select name="lightsaber-color" id="lightsaber-color">
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+          <option value="red">Red</option>
+          <option value="purple">Purple</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" />
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Planet</th>
+            <th>Environment</th>
+            <th>Population</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="planet">Tatooine</td>
+            <td class="environment">Desert</td>
+            <td class="population">200,000</td>
+          </tr>
+          <tr>
+            <td class="planet">Hoth</td>
+            <td class="environment">Ice</td>
+            <td class="population">0</td>
+          </tr>
+          <tr>
+            <td class="planet">Endor</td>
+            <td class="environment">Forest</td>
+            <td class="population">30,000,000</td>
+          </tr>
+          <tr>
+            <td class="planet">Mustafar</td>
+            <td class="environment">Lava</td>
+            <td class="population">10,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </body>
 </html>
