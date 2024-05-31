@@ -22,11 +22,11 @@
 
       section > h2:before {
         counter-increment: section;
-        content: counter(section) '. ';
+        content: counter(section) ". ";
       }
 
-      label[for='word'],
-      label[for='factorial-input'] {
+      label[for="word"],
+      label[for="factorial-input"] {
         display: block;
       }
 
@@ -42,8 +42,8 @@
       <h1>Unit 2 Assessment: JS DOM</h1>
       <p>
         Each of the sections below corresponds with a prompt in
-        <code>js-dom.js</code>. This file has already been imported into this HTML page via the
-        <code>&lt;script&gt;</code> tag below.
+        <code>js-dom.js</code>. This file has already been imported into this
+        HTML page via the <code>&lt;script&gt;</code> tag below.
       </p>
     </header>
     <main>
@@ -81,7 +81,9 @@
         <button id="red">Turn stuff red</button>
 
         <div id="color-changer">
-          <p class="changes-colors">This entire sentence should change colors.</p>
+          <p class="changes-colors">
+            This entire sentence should change colors.
+          </p>
           <p>
             This sentence doesn't change colors except
             <span class="changes-colors">for this phrase here</span>.
@@ -98,7 +100,9 @@
         <h2>Calculate factorial</h2>
 
         <form id="factorial-calculator">
-          <label for="factorial-input">Enter a number to get its factorial</label>
+          <label for="factorial-input"
+            >Enter a number to get its factorial</label
+          >
           <input type="number" id="factorial-input" name="number" />
           <button type="submit">Calculate</button>
         </form>
