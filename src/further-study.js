@@ -31,6 +31,57 @@
 // Ex.:
 //   buildWordChain(['zoo', 'sour', 'racket', 'octos']);
 //   => ['zoo', 'octos', 'sour', 'racket']
-function buildWordChain(words) {}
+function buildWordChain(words) {
+  const sortedWords = {};
+  const wordChain = [];
+  let otherWords = [];
+
+  if (words.length === 0) {
+    return wordChain;
+  }
+  if (words.length === 1) {
+    return words;
+  }
+
+  wordChain.push(words.shift());
+
+  for (const word of words) {
+    if (!sortedWords[word[0]]) {
+      sortedWords[word[0]] = [`${word}`];
+    } else {
+      sortedWords[word[0]].push(word);
+    }
+  }
+
+  for (const firstLetter in sortedWords) {
+    let thisLetter = sortedWords[firstLetter];
+
+    for (let index = 0; index <= thisLetter.length; index++) {
+      otherWords.push(thisLetter.shift());
+    }
+  }
+
+  function builder(arr) {
+    if (arr.length === 0) {
+      return;
+    }
+    for (const eachWord of arr) {
+      let lastWord = wordChain[wordChain.length - 1];
+      let lastLetter = lastWord[lastWord.length - 1];
+      let newArr = [...arr];
+
+      if (lastLetter === eachWord[0] && !wordChain.includes(`${eachWord}`)) {
+        wordChain.push(
+          newArr.splice(newArr.indexOf(`${eachWord}`), 1).toString()
+        );
+        builder(newArr);
+      }
+    }
+  }
+
+  builder(otherWords);
+
+  return wordChain;
+}
 
 export { buildWordChain };
